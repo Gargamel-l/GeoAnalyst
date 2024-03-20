@@ -41,7 +41,6 @@ model.fit(X_train, y_train)
 # Оценка качества модели
 y_pred_val = model.predict(X_val)
 mae_val = mean_absolute_error(y_val, y_pred_val)
-print(f'Mean Absolute Error on validation set: {mae_val}')
 
 # Предсказание для тестового набора данных
 X_test = test_df_extended.drop(['id', 'lat', 'lon'], axis=1)
